@@ -1,5 +1,6 @@
-nav {
+#nav-bar {
   display:flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   height: 120px;
