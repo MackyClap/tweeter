@@ -1,0 +1,30 @@
+nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color:#FFFFFF;
+}
+
+#Right-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-size:.7em;
+  font-family: sans-serif;
+}
+
+#double-down {
+  color:red;
+}
+
+#Title {
+  font-size: 1.6em;
+  padding-top: 1.2em;
+}
+
+
