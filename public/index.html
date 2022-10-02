@@ -50,12 +50,19 @@
           <h2>Your Name</h2>
       </div>
   </header>
-  <h3>What are you humming about?</h1>
-  <hr>
   <!-- Page-specific (main) content here -->
   <main class="container">
-      <p> When's a good time to code? After a long night of coding.</p>
-      
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="post">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
 
     </main>
   </body>
