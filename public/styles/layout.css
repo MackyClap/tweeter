@@ -25,3 +25,12 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.container {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  background-color: inherit;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
