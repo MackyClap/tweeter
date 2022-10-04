@@ -1,7 +1,16 @@
 $(document).ready(() => {
 
-  $('#tweet-text').on('input', function(e) {
+  $('#tweet-text').on('input', function() {
     let charNum = 140 - $(this).val().length;
-    $('#counter').text(charNum);
+    
+
+    if (charNum >= 0) {
+      $('#redCounter').attr('id', 'counter');
+      $('#counter').text(charNum);
+      $('#redCounter').text(charNum);
+    } else {
+      $('#counter').attr('id', 'redCounter');
+      $('#redCounter').text(charNum);
+    }
   });
 });
