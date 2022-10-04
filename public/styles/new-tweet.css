@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  background-color: inherit;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.new-tweet {
+  display: flex;
+  width: 100%;
+  background-color: inherit;
+  flex-direction: inherit;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweetForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 150px;
+}
+
+#label {
+  border:none;
+  padding-bottom: 5px;
+  border-bottom: solid grey 4px;
+}
+
