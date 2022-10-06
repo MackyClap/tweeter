@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  font:inherit;
 }
 
 .new-tweet {
@@ -13,11 +14,13 @@
   width: 100%;
   background-color: inherit;
   flex-direction: inherit;
+  font:inherit;
 }
 
 #footer {
   display: flex;
   justify-content: space-between;
+  font:inherit;
 }
 
 #tweetForm {
@@ -26,11 +29,17 @@
   justify-content: space-between;
   align-items: stretch;
   height: 150px;
+  font:inherit;
 }
 
-#label {
+#tweet-text {
   border:none;
+  background-color: inherit;
   padding-bottom: 5px;
   border-bottom: solid grey 4px;
+}
+
+#redCounter {
+  color: red;
 }
 
