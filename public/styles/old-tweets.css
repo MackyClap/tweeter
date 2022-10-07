@@ -1,0 +1,35 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 150px;
+  font:inherit;
+  width: 100%;
+  background-color: inherit;
+  margin-top: 1em;
+  border: 3px solid grey;
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: inherit;
+  padding: 0 20px;
+  background-image: none;
+}
+
+article.tweet span {
+  border-bottom:3px solid grey;
+  padding: 20px;
+  margin: 0 10px 0 10px;
+
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: .5em;
+}
