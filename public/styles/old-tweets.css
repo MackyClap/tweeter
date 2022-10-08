@@ -20,6 +20,10 @@ article.tweet header {
   background-image: none;
 }
 
+.user-tag {
+  opacity: .3;
+}
+
 article.tweet span {
   border-bottom:3px solid grey;
   padding: 20px;
@@ -32,4 +36,12 @@ article.tweet footer {
   justify-content: space-between;
   padding: 10px 20px;
   font-size: .5em;
+}
+
+.hover {
+  box-shadow: 10px 10px grey;
+}
+
+.symbols-hover {
+  color: #9a8c24;
 }
