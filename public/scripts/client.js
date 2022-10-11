@@ -26,16 +26,16 @@ $(document).ready(() => {
     <article class="tweet">
     <header>
     <div>
-    Newton
+    ${tweetData.user.name}
     </div>
     <div class="user-tag">
-    @Mackattack
+    ${tweetData.user.handle}
     </div>
     </header>
-    <span> I'm testing tweets here</span>
+    <span> ${tweetData.content.text}</span>
     
     <footer>
-    10 days ago
+    ${tweetData.created_at}
     <div class="symbols">
     <i class="fa-solid fa-flag"></i>
     <i class="fa-solid fa-repeat"></i>
@@ -43,7 +43,6 @@ $(document).ready(() => {
     </div>
     </footer>
     </article>`);
-    
     
   };
   
