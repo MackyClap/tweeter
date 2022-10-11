@@ -45,3 +45,14 @@ article.tweet footer {
 .symbols-hover {
   color: #9a8c24;
 }
+
+.tweets-container {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  background-color: inherit;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  font:inherit;
+}
