@@ -72,6 +72,13 @@ $(document).ready(() => {
 
   renderTweets(tweetData);
 
+  //.submit 
+  $("#submit-tweet").submit(function(e) {
+    console.log("handler called");
+    e.preventDefault();
+  })
+  
+
   //make box shadow on hover
   $(".tweet").hover(function() {
 

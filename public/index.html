@@ -56,12 +56,12 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="post">
+      <form id="submit-tweet" action="/tweets" method="post">
         <div id="tweetForm">
           <label for="tweet-text" id="label"><strong>What are you humming about?</strong></label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="footer">
-            <button class="bttn-material-flat bttn-md bttn-primary" id="tweet-bttn">Tweet</button>
+            <button type="submit" class="bttn-material-flat bttn-md bttn-primary" id="tweet-bttn">Tweet</button>
             <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </div>
