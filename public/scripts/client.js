@@ -6,32 +6,6 @@
 
 $(document).ready(() => {
   
-  const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-  
-  
   //createTweets and return the data
   const createTweetElement = (obj) => {
   
@@ -70,8 +44,6 @@ $(document).ready(() => {
     }
   };
 
-  renderTweets(tweetData);
-
   //Prevent post request 
   $("#submit-tweet").submit(function(e) {
     e.preventDefault();
@@ -84,6 +56,19 @@ $(document).ready(() => {
     })
     
   })
+
+  const loadTweets = () => {
+    const $button = $('#submit-tweet');
+    $button.submit(function () {
+
+      $.ajax('tweets', { method: 'GET'})
+      .then(function (eachTweet) {
+        renderTweets(eachTweet)
+      });
+    });
+  };
+
+  loadTweets();
 
   //make box shadow on hover
   $(".tweet").hover(function() {
