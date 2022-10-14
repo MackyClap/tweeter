@@ -66,7 +66,7 @@ $(document).ready(() => {
     for (const tweet of tweetData) {
       let eachTweet = tweet;
       //add tweets to tweets container
-      $(".tweets-container").append(createTweetElement(eachTweet));
+      $(".tweets-container").prepend(createTweetElement(eachTweet));
     }
   };
 
@@ -74,13 +74,16 @@ $(document).ready(() => {
 
   //Prevent post request 
   $("#submit-tweet").submit(function(e) {
-    let newTweetData = $("#submit-tweet").serialize();
-    console.log(newTweetData);
     e.preventDefault();
+    let newTweetData = $("#submit-tweet").serialize();
+    
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: newTweetData
+    })
+    
   })
-
-
-  
 
   //make box shadow on hover
   $(".tweet").hover(function() {
