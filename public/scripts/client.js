@@ -5,10 +5,10 @@
  */
 
 $(document).ready(() => {
-  
+
   //createTweets and return the data
   const createTweetElement = (obj) => {
-  
+    const ago = timeago.format(obj.created_at)
     let $tweet = $(`
     <article class="tweet">
     <header>
@@ -22,7 +22,7 @@ $(document).ready(() => {
     <span> ${obj.content.text}</span>
     
     <footer>
-    ${obj.created_at}
+    ${ago}
     <div class="symbols">
     <i class="fa-solid fa-flag"></i>
     <i class="fa-solid fa-repeat"></i>
@@ -30,13 +30,14 @@ $(document).ready(() => {
     </div>
     </footer>
     </article>`);
-  
+
     return $tweet;
-    
+
   };
-  
+
   //definte function to take in array of tweets and append
   const renderTweets = (tweetData) => {
+    $(".tweets-container").empty();
     for (const tweet of tweetData) {
       let eachTweet = tweet;
       //add tweets to tweets container
@@ -45,39 +46,35 @@ $(document).ready(() => {
   };
 
   //Prevent post request 
-  $("#submit-tweet").submit(function(e) {
+  $("#submit-tweet").submit(function (e) {
     e.preventDefault();
     let newTweetData = $("#submit-tweet").serialize();
-    
+
     $.ajax({
       type: "POST",
       url: "/tweets",
-      data: newTweetData
+      data: newTweetData,
+      success: loadTweets()
     })
-    
   })
 
   const loadTweets = () => {
-    const $button = $('#submit-tweet');
-    $button.submit(function () {
-
-      $.ajax('tweets', { method: 'GET'})
+    $.ajax('tweets', { method: 'GET' })
       .then(function (eachTweet) {
         renderTweets(eachTweet)
       });
-    });
   };
 
   loadTweets();
 
   //make box shadow on hover
-  $(".tweet").hover(function() {
+  $(".tweet").hover(function () {
 
     $(this).toggleClass('hover');
   });
 
   //make symbols below tweet change color
-  $("div.symbols").children().hover(function() {
+  $("div.symbols").children().hover(function () {
 
     $(this).toggleClass('symbols-hover');
   });
