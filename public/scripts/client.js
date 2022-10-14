@@ -72,11 +72,14 @@ $(document).ready(() => {
 
   renderTweets(tweetData);
 
-  //.submit 
+  //Prevent post request 
   $("#submit-tweet").submit(function(e) {
-    console.log("handler called");
+    let newTweetData = $("#submit-tweet").serialize();
+    console.log(newTweetData);
     e.preventDefault();
   })
+
+
   
 
   //make box shadow on hover
