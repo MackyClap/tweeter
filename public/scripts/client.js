@@ -52,12 +52,15 @@ $(document).ready(() => {
     $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
 
+    //validate if tweet is over 140 characters
     if(newTweetData.length>140) {
       alert("Tweet should be less than 140 characters")
+    //validate if tweet is empty
     } else if (newTweetData.length === 5) {
       alert("Please enter a Tweet")
     } else {
 
+    //post tweet to server
     $.ajax({
       type: "POST",
       url: "/tweets",
