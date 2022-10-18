@@ -37,6 +37,7 @@ $(document).ready(() => {
 
   //definte function to take in array of tweets and append
   const renderTweets = (tweetData) => {
+    //empty tweets container so as to not call all tweets
     $(".tweets-container").empty();
     for (const tweet of tweetData) {
       let eachTweet = tweet;
@@ -45,17 +46,25 @@ $(document).ready(() => {
     }
   };
 
-  //Prevent post request 
   $("#submit-tweet").submit(function (e) {
+    //Prevent post request that goes to /tweets
     e.preventDefault();
+    $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
+
+    if(newTweetData.length>140) {
+      alert("Tweet should be less than 140 characters")
+    } else if (newTweetData.length === 5) {
+      alert("Please enter a Tweet")
+    } else {
 
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: newTweetData,
       success: loadTweets()
-    })
+    
+    })}
   })
 
   const loadTweets = () => {
@@ -69,13 +78,11 @@ $(document).ready(() => {
 
   //make box shadow on hover
   $(".tweet").hover(function () {
-
     $(this).toggleClass('hover');
   });
 
   //make symbols below tweet change color
   $("div.symbols").children().hover(function () {
-
     $(this).toggleClass('symbols-hover');
   });
 });
