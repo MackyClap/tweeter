@@ -62,15 +62,15 @@ $(document).ready(() => {
     
     //validate if tweet is over 140 characters
     if(newTweetData.length>140) {
-      $(".error").hide()
+      $(".error").slideUp()
       $(".max").slideDown()
       //validate if tweet is empty
     } else if (newTweetData.length === 5) {
-      $(".error").hide()
+      $(".error").slideUp()
       $(".noTweet").slideDown()
     } else {
 
-      $(".error").hide()  
+      $(".error").slideUp()  
     //post tweet to server
     $.ajax({
       type: "POST",
