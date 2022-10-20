@@ -52,20 +52,25 @@ $(document).ready(() => {
     }
   };
 
+  $(".error").hide()
+
   $("#submit-tweet").submit(function (e) {
     //Prevent post request that goes to /tweets
     e.preventDefault();
     $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
-
+    
     //validate if tweet is over 140 characters
     if(newTweetData.length>140) {
-      alert("Tweet should be less than 140 characters")
-    //validate if tweet is empty
+      $(".error").hide()
+      $(".max").slideDown()
+      //validate if tweet is empty
     } else if (newTweetData.length === 5) {
-      alert("Please enter a Tweet")
+      $(".error").hide()
+      $(".noTweet").slideDown()
     } else {
 
+      $(".error").hide()  
     //post tweet to server
     $.ajax({
       type: "POST",

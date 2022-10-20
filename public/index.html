@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/button.css" type="text/css" />
     <link rel="stylesheet" href="/styles/old-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/errors.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -60,7 +61,8 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <div class="error">Error</div>
+      <div class="error max">Please enter less than 140 charcters!</div>
+      <div class="error noTweet">Please enter a Tweet!</div>
       <form id="submit-tweet" action="/tweets" method="post">
         <div id="tweetForm">
           <label for="tweet-text" id="label"><strong>What are you humming about?</strong></label>
