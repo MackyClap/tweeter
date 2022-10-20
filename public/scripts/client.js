@@ -6,6 +6,12 @@
 
 $(document).ready(() => {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+  };
+
   //createTweets and return the data
   const createTweetElement = (obj) => {
     const ago = timeago.format(obj.created_at)
@@ -19,7 +25,7 @@ $(document).ready(() => {
     ${obj.user.handle}
     </div>
     </header>
-    <span> ${obj.content.text}</span>
+    <span>${escape(obj.content.text)}</span>
     
     <footer>
     ${ago}
