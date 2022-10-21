@@ -5,6 +5,8 @@
  */
 
 $(document).ready(() => {
+  
+  $(".error").hide()
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -52,21 +54,20 @@ $(document).ready(() => {
     }
   };
 
-  $(".error").hide()
 
   $("#submit-tweet").submit(function (e) {
     //Prevent post request that goes to /tweets
     e.preventDefault();
     $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
-    console.log($("#submit-tweet"));
-   
+    let textAreaCount = $("#submit-tweet").find('textarea').val().length;
+
      //validate if tweet is over 140 characters
-     if(newTweetData.length>145) {
+     if(textAreaCount > 140) {
       $(".error").slideUp()
       $(".max").slideDown()
       //validate if tweet is empty
-    } else if (newTweetData.length === 5) {
+    } else if (textAreaCount === 0) {
       $(".error").slideUp()
       $(".noTweet").slideDown()
     } else {
