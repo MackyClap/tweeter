@@ -58,12 +58,11 @@ $(document).ready(() => {
   $("#submit-tweet").submit(function (e) {
     //Prevent post request that goes to /tweets
     e.preventDefault();
-    $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
     let textAreaCount = $("#submit-tweet").find('textarea').val().length;
-
-     //validate if tweet is over 140 characters
-     if(textAreaCount > 140) {
+    
+    //validate if tweet is over 140 characters
+    if(textAreaCount > 140) {
       $(".error").slideUp()
       $(".max").slideDown()
       //validate if tweet is empty
@@ -71,16 +70,16 @@ $(document).ready(() => {
       $(".error").slideUp()
       $(".noTweet").slideDown()
     } else {
-
+      
       $(".error").slideUp()  
-    //post tweet to server
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: newTweetData,
-      success: loadTweets()
-    
-    })}
+      //post tweet to server
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: newTweetData,
+        success: loadTweets()
+        
+      })}
   })
 
   const loadTweets = () => {
