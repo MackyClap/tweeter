@@ -1,7 +1,6 @@
 $(document).ready(() => {
   $('#tweet-text').on('keyup', function() {
     let charNum = 140 - $(this).val().length;
-    
 
     if (charNum >= 0) {
       $('#redCounter').attr('id', 'counter');
@@ -9,6 +8,9 @@ $(document).ready(() => {
     } else {
       $('#counter').attr('id', 'redCounter');
       $('#redCounter').text(charNum);
+      
     }
   });
 });
+
+//disable tweet button if greater than 140 characters

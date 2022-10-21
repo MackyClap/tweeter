@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  height: 150px;
   font:inherit;
+  min-height: 200px;
   width: 100%;
   background-color: inherit;
   margin-top: 1em;
@@ -48,7 +48,7 @@ article.tweet footer {
 
 .tweets-container {
   display: flex;
-  width: 90%;
+  max-width: 90%;
   align-items: center;
   background-color: inherit;
   justify-content: center;

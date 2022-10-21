@@ -25,3 +25,35 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ @media only screen and (min-width: 1024px) {
+  .desktop-view {
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    padding-top: 150px;
+    background-color: #f4f1ec;
+    background-image: url("https://www.transparenttextures.com/patterns/diagonal-waves.png");
+  }
+
+  .profile {
+    display:flex;
+    align-items: center;
+    padding-top: 45px;  
+    width:40%
+  }
+
+  #nav-bar {
+    display:flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #4056A1;
+    background-image: url("https://www.transparenttextures.com/patterns/diagonal-waves.png");
+    font-family: 'Bungee', sans-serif;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: 100%;
+  }
+}
+

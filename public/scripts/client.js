@@ -59,9 +59,10 @@ $(document).ready(() => {
     e.preventDefault();
     $(".tweet-text").empty()
     let newTweetData = $("#submit-tweet").serialize();
-    
-    //validate if tweet is over 140 characters
-    if(newTweetData.length>140) {
+    console.log($("#submit-tweet"));
+   
+     //validate if tweet is over 140 characters
+     if(newTweetData.length>145) {
       $(".error").slideUp()
       $(".max").slideDown()
       //validate if tweet is empty
