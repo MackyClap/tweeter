@@ -1,11 +1,12 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
 
 $(document).ready(() => {
   
+  //hide element that shows error message
   $(".error").hide()
 
   const escape = function (str) {
@@ -59,6 +60,8 @@ $(document).ready(() => {
     //Prevent post request that goes to /tweets
     e.preventDefault();
     let newTweetData = $("#submit-tweet").serialize();
+
+    //to find length of characters submitted
     let textAreaCount = $("#submit-tweet").find('textarea').val().length;
     
     //validate if tweet is over 140 characters
@@ -79,7 +82,9 @@ $(document).ready(() => {
         data: newTweetData,
         success: loadTweets()
         
-      })}
+      })
+      $("#submit-tweet").find('textarea').val("")
+    }
   })
 
   const loadTweets = () => {
@@ -89,15 +94,27 @@ $(document).ready(() => {
       });
   };
 
+  //load tweets to page
   loadTweets();
 
-  //make box shadow on hover
-  $(".tweet").hover(function () {
-    $(this).toggleClass('hover');
+  //add box shadow on mouse enter for tweet box
+  $(document).on("mouseenter",".tweet",function () {
+    $(this).addClass('hover');
   });
 
-  //make symbols below tweet change color
-  $("div.symbols").children().hover(function () {
-    $(this).toggleClass('symbols-hover');
+  //remove box shadow on mouse leave tweet box
+  $(document).on("mouseleave",".tweet",function () {
+    $(this).removeClass('hover');
   });
+
+  //change symbol color in tweet box on mouse enter
+  $(document).on("mouseenter",".fa-solid",function () {
+    $(this).addClass('symbols-hover');
+  });
+
+  //change symbol color back in tweet box on mouse leave
+  $(document).on("mouseleave",".fa-solid",function () {
+    $(this).removeClass('symbols-hover');
+  });
+
 });
