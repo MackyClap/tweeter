@@ -24,9 +24,12 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 ### Responsive layout
-!["Screenshot of URLs page"](/docs/Full%20Layoout.PNG)
 
-!["Screenshot of URLs page"](/docs/responsive.PNG)
+#### Greater than 1020px
+!["Full Layout"](/docs/Full%20Layoout.PNG)
+
+#### Less than 1020px
+!["Small Layout"](/docs/responsive.PNG)
 
 ### Hover box shadow
-!["Screenshot of URLs page"](/docs/Hover-Tweet.PNG)
+!["Hover classes"](https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif)
