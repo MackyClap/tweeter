@@ -26,12 +26,10 @@ A simple single-page AJAX-based Twitter clone made using HTML, CSS, JS and jQuer
 ### Responsive layout
 
 #### Greater than 1020px
-!["Full Layout"](/docs/Full%20Layoout.PNG)
+!["Screenshot of Desktop Layout"](https://github.com/MackyClap/tweeter/blob/master/docs/Full%20Layoout.PNG)
 
 #### Less than 1020px
-!["Small Layout"](/docs/responsive.PNG)
+!["Screenshot Smaller than desktop Layout"](https://github.com/MackyClap/tweeter/blob/master/docs/responsive.PNG)
 
 ### Hover box shadow
-!["Hover classes"](https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif)
-
-<!-- https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif -->
+!["gif of Hover classes"](https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif)
