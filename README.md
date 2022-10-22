@@ -32,6 +32,6 @@ A simple single-page AJAX-based Twitter clone made using HTML, CSS, JS and jQuer
 !["Small Layout"](/docs/responsive.PNG)
 
 ### Hover box shadow
-!["Hover classes"](/docs/giphy.mp4)
+!["Hover classes"](https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif)
 
 <!-- https://media.giphy.com/media/rwUoXO704BzClr8YEU/giphy.gif -->
