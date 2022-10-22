@@ -20,3 +20,13 @@ This repository is the starter code for the project: Students will fork and clon
 - Chance
 - Nodemon
 - md5
+
+## Final Product
+
+### Responsive layout
+!["Screenshot of URLs page"](/docs/Full%20Layoout.PNG)
+
+!["Screenshot of URLs page"](/docs/responsive.PNG)
+
+### Hover box shadow
+!["Screenshot of URLs page"](/docs/Hover-Tweet.PNG)
